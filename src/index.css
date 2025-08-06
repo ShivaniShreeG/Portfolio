@@ -1,13 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-black text-white;
+}
+.icon-glow {
+  color: #14b8a6;
+  text-shadow:
+    0 0 4px #14b8a6,
+    0 0 8px #14b8a6,
+    0 0 12px #0ff;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.icon-glow:hover {
+  transform: scale(1.15);
+  text-shadow:
+    0 0 6px #14b8a6,
+    0 0 12px #0ff,
+    0 0 18px #0ff;
 }
+/* index.css */
+.glow-text {
+  text-shadow: 0 0 8px #14b8a6, 0 0 16px #14b8a6;
+}
+@keyframes slowBounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(-15px);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.animate-slow-bounce {
+  animation: slowBounce 5s infinite;
+}
+
+/* ----------------- TEXT GLOW ---------------- */
+.text-glow {
+  color: #0ff;
+  text-shadow:
+    0 0 5px #ffc107,
+    0 0 8px #ec4899,
+    0 0 12px #ec4899,
+    0 0 16px #8b5cf6,
+    0 0 20px #14b8a6,
+    0 0 24px #14b8a6;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #ffc107,
+      0 0 10px #ec4899,
+      0 0 15px #8b5cf6,
+      0 0 20px #14b8a6;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #ffc107,
+      0 0 4px #ec4899,
+      0 0 6px #8b5cf6,
+      0 0 8px #14b8a6;
+  }
+}
+
+.text-glow-animated {
+  color: #0ff;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* ----------------- FLOAT + MULTICOLOR GLOW ---------------- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow:
+      0 0 10px #14b8a6,
+      0 0 20px #14b8a6;
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 15px #0ff,
+      0 0 25px #14b8a6;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ----------------- IMAGE BORDER GLOW ---------------- */
+.glow-ring {
+  box-shadow:
+    0 0 10px #14b8a6,
+    0 0 20px #0ff,
+    0 0 30px #14b8a6;
+  border: 4px solid #14b8a6;
+  border-radius: 9999px;
+}
+
+/* ----------------- BUTTON GLOW (SOFTER) ---------------- */
+.button-glow {
+  box-shadow:
+    0 0 6px #14b8a6,
+    0 0 12px #0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-glow:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 10px #14b8a6,
+    0 0 16px #0ff;
+}
+
