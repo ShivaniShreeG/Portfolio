@@ -87,7 +87,7 @@ function Home() {
               View Projects
             </ScrollLink>
             <a
-  href="/Shivani.pdf"
+  href={`${process.env.PUBLIC_URL}/Shivani.pdf`}
   download
   className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
 >
