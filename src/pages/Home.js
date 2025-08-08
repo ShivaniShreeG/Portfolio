@@ -5,9 +5,10 @@ import {
   FaDownload,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import { Link as ScrollLink } from "react-scroll"; // ✅ import like navbar
 import profileImage from "../assets/Profile.jpeg";
+import { Link as ScrollLink } from "react-scroll";
 import "../index.css";
+import resumePDF from "../assets/Shivani.pdf";
 
 function Home() {
   return (
@@ -16,7 +17,6 @@ function Home() {
       className="min-h-screen flex items-center justify-center bg-black px-4 pt-20"
     >
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl w-full">
-        
         {/* Profile Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <div className="glow-ring animate-float shadow-xl">
@@ -35,7 +35,7 @@ function Home() {
           </h1>
 
           <h2 className="text-lg md:text-xl text-teal font-semibold mb-2 tracking-wide">
-            Software Developer • Fullstack Enthusiast • Creative Problem Solver
+            Software Developer • UI/UX Designer • Fullstack Enthusiast
           </h2>
 
           <p className="text-gray-400 mb-2 text-sm md:text-base">
@@ -76,7 +76,6 @@ function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-4 w-full justify-center md:justify-start">
-            {/* View Projects */}
             <ScrollLink
               to="projects"
               smooth={true}
@@ -87,18 +86,14 @@ function Home() {
               <FaExternalLinkAlt className="group-hover:translate-x-1 transition" />
               View Projects
             </ScrollLink>
-
-            {/* Download Resume */}
             <a
-              href="/Shivani.pdf" // Must be in public folder
-              download
+              href={resumePDF} download
               className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
             >
               <FaDownload className="group-hover:rotate-12 transition" />
               Download Resume
             </a>
 
-            {/* Contact Me */}
             <ScrollLink
               to="contact"
               smooth={true}
