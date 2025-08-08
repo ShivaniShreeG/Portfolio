@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.5866a41a.css",
-    "main.js": "/Portfolio/static/js/main.ec09e4da.js",
+    "main.js": "/Portfolio/static/js/main.9d86d4e9.js",
     "static/js/453.ad7768ec.chunk.js": "/Portfolio/static/js/453.ad7768ec.chunk.js",
     "static/media/hoverSaleDemo1.mp4": "/Portfolio/static/media/hoverSaleDemo1.7e91fb68784a123ec9d6.mp4",
     "static/media/ecommerce.png": "/Portfolio/static/media/ecommerce.df74e3205f983001b07a.png",
     "static/media/hoverSaleScreenshot.png": "/Portfolio/static/media/hoverSaleScreenshot.df74e3205f983001b07a.png",
     "static/media/portfolio.png": "/Portfolio/static/media/portfolio.5633ea479d1516032496.png",
+    "static/media/Shivani.pdf": "/Portfolio/static/media/Shivani.9924436bab01395df4fb.pdf",
     "static/media/Profile.jpeg": "/Portfolio/static/media/Profile.50a5bb5616630bd3dadb.jpeg",
     "index.html": "/Portfolio/index.html",
     "main.5866a41a.css.map": "/Portfolio/static/css/main.5866a41a.css.map",
-    "main.ec09e4da.js.map": "/Portfolio/static/js/main.ec09e4da.js.map",
+    "main.9d86d4e9.js.map": "/Portfolio/static/js/main.9d86d4e9.js.map",
     "453.ad7768ec.chunk.js.map": "/Portfolio/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5866a41a.css",
-    "static/js/main.ec09e4da.js"
+    "static/js/main.9d86d4e9.js"
   ]
 }
