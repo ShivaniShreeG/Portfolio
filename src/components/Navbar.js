@@ -11,6 +11,7 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,23 +21,23 @@ function Navbar() {
   const isProjectPage = location.pathname.startsWith("/projects/");
 
   const menuItems = [
-    { name: "Home", icon: <FaHome />, link: "#home" },
-    { name: "About", icon: <FaUser />, link: "#about" },
-    { name: "Skills", icon: <FaCode />, link: "#skills" },
-    { name: "Projects", icon: <FaProjectDiagram />, link: "#projects" },
-    { name: "Contact", icon: <FaEnvelope />, link: "#contact" },
+    { name: "Home", icon: <FaHome />, link: "home" },
+    { name: "About", icon: <FaUser />, link: "about" },
+    { name: "Skills", icon: <FaCode />, link: "skills" },
+    { name: "Projects", icon: <FaProjectDiagram />, link: "projects" },
+    { name: "Contact", icon: <FaEnvelope />, link: "contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black bg-opacity-80 px-6 py-4 z-50 shadow-lg">
       <div className="flex justify-between items-center">
-        {/* Logo with Icon */}
+        {/* Logo */}
         <div className="flex items-center space-x-2 text-glow text-2xl md:text-3xl font-extrabold tracking-wide">
-          <FaLaptopCode className="flex items-center space-x-2 text-glow text-2xl md:text-3xl font-extrabold tracking-wide"/>
+          <FaLaptopCode />
           <span>Shivani</span>
         </div>
 
-        {/* Project Page - Only Back Button */}
+        {/* Back button on project page */}
         {isProjectPage ? (
           <button
             onClick={() => navigate("/")}
@@ -47,12 +48,11 @@ function Navbar() {
           </button>
         ) : (
           <>
-            {/* Hamburger (Mobile) */}
+            {/* Mobile Hamburger */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-glow text-2xl"
-                aria-label="Toggle Menu"
               >
                 {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
               </button>
@@ -61,33 +61,39 @@ function Navbar() {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               {menuItems.map((item) => (
-                <a
+                <ScrollLink
                   key={item.name}
-                  href={item.link}
-                  className="flex items-center space-x-2 text-glow font-semibold hover:scale-105 transition-transform duration-200"
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
+                  offset={-70} // adjust for navbar height
+                  className="flex items-center space-x-2 text-glow font-semibold hover:scale-105 transition-transform duration-200 cursor-pointer"
                 >
                   {item.icon}
                   <span>{item.name}</span>
-                </a>
+                </ScrollLink>
               ))}
             </div>
           </>
         )}
       </div>
 
-      {/* Mobile Menu (only on non-project pages) */}
+      {/* Mobile Menu */}
       {!isProjectPage && isMobileMenuOpen && (
         <div className="mt-4 md:hidden flex flex-col items-center space-y-4 bg-black bg-opacity-90 py-4 rounded-lg shadow-md">
           {menuItems.map((item) => (
-            <a
+            <ScrollLink
               key={item.name}
-              href={item.link}
-              className="flex items-center space-x-2 text-glow font-semibold"
+              to={item.link}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="flex items-center space-x-2 text-glow font-semibold cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.icon}
               <span>{item.name}</span>
-            </a>
+            </ScrollLink>
           ))}
         </div>
       )}

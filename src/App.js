@@ -7,8 +7,8 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import ProjectDetails from "./pages/ProjectDetails"; // Add this page
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProjectDetails from "./pages/ProjectDetails";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -18,15 +18,18 @@ function App() {
         <Navbar />
         <main className="relative z-10 p-4">
           <Routes>
-            <Route path="/" element={
-              <>
-                <Home />
-                <About />
-                <Skills />
-                <Projects />
-                <Contact />
-              </>
-            } />
+            <Route
+              path="/"
+              element={
+                <>
+                  <section id="home"><Home /></section>
+                  <section id="about"><About /></section>
+                  <section id="skills"><Skills /></section>
+                  <section id="projects"><Projects /></section>
+                  <section id="contact"><Contact /></section>
+                </>
+              }
+            />
             <Route path="/projects/:id" element={<ProjectDetails />} />
           </Routes>
         </main>
