@@ -5,18 +5,11 @@ import {
   FaDownload,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll"; // ✅ import like navbar
 import profileImage from "../assets/Profile.jpeg";
 import "../index.css";
 
 function Home() {
-  // Scroll to section function
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -83,16 +76,21 @@ function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-4 w-full justify-center md:justify-start">
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
+            {/* View Projects */}
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow cursor-pointer"
             >
               <FaExternalLinkAlt className="group-hover:translate-x-1 transition" />
               View Projects
-            </button>
+            </ScrollLink>
 
+            {/* Download Resume */}
             <a
-              href="/Shivani.pdf" // PDF should be in public folder
+              href="/Shivani.pdf" // Must be in public folder
               download
               className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
             >
@@ -100,12 +98,16 @@ function Home() {
               Download Resume
             </a>
 
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
+            {/* Contact Me */}
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow cursor-pointer"
             >
               Contact Me
-            </button>
+            </ScrollLink>
           </div>
         </div>
       </div>
