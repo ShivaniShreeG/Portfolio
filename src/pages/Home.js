@@ -8,7 +8,7 @@ import {
 import profileImage from "../assets/Profile.jpeg";
 import { Link as ScrollLink } from "react-scroll";
 import "../index.css";
-import resumePDF from "../assets/Shivani.pdf";
+
 
 function Home() {
   return (
@@ -87,12 +87,14 @@ function Home() {
               View Projects
             </ScrollLink>
             <a
-              href={resumePDF} download
-              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
-            >
-              <FaDownload className="group-hover:rotate-12 transition" />
-              Download Resume
-            </a>
+  href="/Shivani.pdf"
+  download
+  className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
+>
+  <FaDownload className="group-hover:rotate-12 transition" />
+  Download Resume
+</a>
+
 
             <ScrollLink
               to="contact"
