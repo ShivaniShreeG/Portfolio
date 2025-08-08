@@ -2,9 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .swiper-pagination-bullet {
+    @apply bg-teal-400 opacity-70 transition-all duration-300;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-teal-400 shadow-[0_0_10px_#14b8a6] opacity-100;
+  }
+}
+
+/* ----------------- SWIPER NAVIGATION ARROWS ---------------- */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #14b8a6; /* Aqua teal */
+  text-shadow:
+    0 0 4px #14b8a6,
+    0 0 8px #14b8a6,
+    0 0 12px #0ff;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.15);
+  text-shadow:
+    0 0 6px #14b8a6,
+    0 0 12px #0ff,
+    0 0 18px #0ff;
+}
+
+@keyframes bulletPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #14b8a6, 0 0 20px #0ff;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 15px #0ff, 0 0 30px #14b8a6;
+    transform: scale(1.2);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  animation: bulletPulse 1.5s ease-in-out infinite;
+}
+
 body {
   @apply bg-black text-white;
 }
+
 .icon-glow {
   color: #14b8a6;
   text-shadow:
@@ -21,10 +66,12 @@ body {
     0 0 12px #0ff,
     0 0 18px #0ff;
 }
-/* index.css */
+
+/* ----------------- GLOW TEXT ---------------- */
 .glow-text {
   text-shadow: 0 0 8px #14b8a6, 0 0 16px #14b8a6;
 }
+
 @keyframes slowBounce {
   0%, 100% {
     transform: translateY(0);
@@ -111,10 +158,93 @@ body {
     0 0 12px #0ff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .button-glow:hover {
   transform: scale(1.03);
   box-shadow:
     0 0 10px #14b8a6,
     0 0 16px #0ff;
 }
+/* ----------------- CUSTOM SCROLLBAR (MATCH TEAL GLOW) ---------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background: #000; /* Match page background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14b8a6;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px #14b8a6,
+    0 0 10px #0ff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ff;
+  box-shadow:
+    0 0 8px #0ff,
+    0 0 16px #14b8a6;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #000;
+}
+
+/* ----------------- SWIPER PAGINATION DOTS GLOW ---------------- */
+.swiper-pagination-bullet {
+  background: #14b8a6 !important;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.2);
+  box-shadow:
+    0 0 6px #14b8a6,
+    0 0 12px #0ff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #14b8a6 !important;
+  box-shadow:
+    0 0 10px #14b8a6,
+    0 0 20px #0ff;
+  animation: bulletPulse 1.5s ease-in-out infinite;
+}
+/* Push arrows outside the swiper container */
+.swiper-button-prev {
+  left: -50px; /* Push to the left */
+}
+
+.swiper-button-next {
+  right: -50px; /* Push to the right */
+}
+
+/* Neon glowing arrow style */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 4px #14b8a6,
+    0 0 8px #14b8a6,
+    0 0 12px #0ff !important;
+  transition: transform 0.3s ease, text-shadow 0.3s ease !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.15) !important;
+  text-shadow:
+    0 0 6px #14b8a6,
+    0 0 12px #0ff,
+    0 0 18px #0ff !important;
+}
+.swiper {
+  padding: 0 60px; /* space inside swiper container */
+}

@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 function About() {
   return (
-    <section id="about" className="min-h-screen bg-black text-white flex items-center justify-center px-4 py-16">
+    <section id="about" className="min-h-screen bg-black text-white px-8 py-16 flex flex-col items-center">
       <div className="max-w-4xl w-full rounded-2xl p-8 border border-teal-400 shadow-[0_0_25px_#00ffff] bg-black/30 backdrop-blur-md transition-all duration-300">
         <h2 className="animate-slow-bounce text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-aqua to-teal mb-8 text-center drop-shadow-[0_0_8px_#14b8a6] flex items-center justify-center gap-4">
   <FaUser className="text-5xl icon-glow" />

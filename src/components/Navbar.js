@@ -32,7 +32,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-black bg-opacity-80 px-6 py-4 z-50 shadow-lg">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center space-x-2 text-glow text-2xl md:text-3xl font-extrabold tracking-wide">
+        <div className="animate-slow-bounce flex items-center space-x-2 text-glow text-2xl md:text-3xl font-extrabold tracking-wide">
           <FaLaptopCode />
           <span>Shivani</span>
         </div>
