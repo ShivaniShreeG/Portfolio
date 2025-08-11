@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserGraduate, FaCode, FaLaptopCode, FaProjectDiagram, FaAward } from 'react-icons/fa';
+import { FaUserGraduate, FaCode,FaCloudSun, FaLaptopCode, FaProjectDiagram, FaAward } from 'react-icons/fa';
 import { FaUser } from "react-icons/fa";
 
 function About() {
@@ -47,6 +47,18 @@ function About() {
               One of my standout projects is <span className="text-teal-400 font-medium">HoverSale</span>, a fully functional e-commerce platform deployed on AWS, and featured on Ramchin’s official project showcase.
             </p>
           </div>
+          <div className="flex items-start gap-4">
+  <div className="min-w-[2rem]">
+    {/* Using FaCloudSun for a weather-related feel */}
+    <FaCloudSun className="text-aqua text-2xl" />
+  </div>
+  <p>
+    I also developed a{" "}
+    <span className="text-teal-400 font-medium">Weather Dashboard</span>, 
+    a real-time, API-powered web app that provides location-based forecasts 
+    with an interactive and responsive UI.
+  </p>
+</div>
 
           {/* Certifications & Leadership */}
           <div className="flex items-start gap-4">
