@@ -3,6 +3,7 @@ import { FaProjectDiagram, FaGlobe } from 'react-icons/fa'; // Using globe icon
 import { useNavigate } from 'react-router-dom';
 import ecommerceImage from '../assets/ecommerce.png';
 import portfolioImage from '../assets/portfolio.png';
+import weatherImage from '../assets/weather.png';
 
 function Projects() {
   const navigate = useNavigate();
@@ -22,7 +23,15 @@ function Projects() {
       image: portfolioImage,
       description:
         "Animated personal portfolio built with React and Tailwind CSS, featuring a glowing UI and animated particle background",
-      link: "#",
+      link: "https://shivanishreeg.github.io/Portfolio/",
+    },
+    {
+      id: 'weather-dashboard',
+      title: "Weather Dashboard",
+      image: weatherImage,
+      description:
+        "Interactive map-based weather app using Leaflet.js, OpenWeather API, and Tailwind CSS. Features live location detection, search, draggable pins, and detailed weather cards.",
+      link: "https://shivanishreeg.github.io/Weather-Dashboard/", // Replace with your deployed link
     },
   ];
 

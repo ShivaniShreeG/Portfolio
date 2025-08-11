@@ -25,7 +25,10 @@ function ProjectDetails() {
         '🧑‍💼 Admin dashboard',
         '📱 Fully responsive UI',
       ],
-      tech: ['⚛️ React.js', '🎨 Tailwind CSS', '🌐 Node.js', '📦 Express.js', '🛢 MySQL', '☁️ AWS S3'],
+      tech: ['⚛️ React.js', '🎨 Tailwind CSS', '🌐 Node.js', '📦 Express.js', '🛢 MySQL (AWS Aurora RDS)',
+  '☁️ AWS S3',
+  '💻 AWS EC2',
+  '🖼 Cloudinary'],
       challenges: [
         'Cross-origin setup with CORS and proxies',
         'Dynamic PDF generation for invoices',
@@ -33,6 +36,44 @@ function ProjectDetails() {
       ],
       learnings: ['AWS S3 & EC2 deployment', 'Secure RESTful APIs with JWT', 'Mobile-first responsive layouts with Tailwind'],
     },
+    'weather-dashboard': {
+  title: 'Weather Dashboard – Interactive Map & Forecast App',
+  screenshot: require('../assets/weather.png'), // Add your screenshot file
+  demoVideos: [], // Add a video if you have one
+  liveLink: 'https://shivanishreeg.github.io/Weather-Dashboard/',
+  github: 'https://github.com/ShivaniShreeG/Weather-Dashboard',
+  overview:
+    'This Weather Dashboard is a modern, interactive application that shows real-time weather data for any location. It features a live map with the ability to drop pins, search locations, and view detailed weather information. It detects the user’s current location automatically and provides a mobile-friendly, responsive UI built with Tailwind CSS.',
+  features: [
+    '📍 Live interactive map with draggable and clickable pins',
+    '🔍 Search bar with suggestions and enter-to-search support',
+    '📡 Automatic current location detection using Geolocation API',
+    '🌡 Real-time weather data with temperature, humidity, wind, and conditions',
+    '📱 Fully responsive design optimized for mobile devices',
+    '🗺 Google Maps-like interface with weather details pop-ups',
+    '🎨 Tailwind CSS-powered attractive UI with smooth animations'
+  ],
+  tech: [
+    '⚛️ HTML5',
+    '🎨 Tailwind CSS',
+    '📜 JavaScript (ES6)',
+    '🌐 OpenWeatherMap API',
+    '🗺 Leaflet.js (Interactive Maps)',
+    '📍 Geolocation API'
+  ],
+  challenges: [
+    'Integrating real-time weather data with map markers',
+    'Ensuring search suggestions remain clickable on mobile devices',
+    'Handling geolocation permissions and fallbacks gracefully',
+    'Optimizing the map and weather info for smaller screen sizes'
+  ],
+  learnings: [
+    'Using Leaflet.js for custom interactive maps',
+    'API data handling and async/await for smooth user experience',
+    'Responsive design techniques for map-based applications',
+    'Improving UX with persistent search results and animations'
+  ]
+},
 
     portfolio: {
       title: 'Personal Portfolio – Developer Showcase',
