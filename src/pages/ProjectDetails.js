@@ -12,7 +12,7 @@ function ProjectDetails() {
       title: 'HoverSale – Full-Stack E-Commerce App',
       screenshot: hoverSaleScreenshot,
       demoVideos: [demoVideo1], // Add more if needed
-      liveLink: 'http://hover-shop.s3-website.eu-north-1.amazonaws.com/',
+      liveLink: 'https://shivanishreeg.github.io/HoverSale/',
       github: 'https://github.com/ShivaniShreeG/E-Commerce-website',
       overview:
         'HoverSale is a modern, responsive eCommerce platform built using the MERN-like stack with MySQL. Users can register, browse, buy, and track orders. It’s deployed on AWS S3 with full functionality including wishlist, cart, invoice email, and more.',

@@ -15,7 +15,7 @@ function Projects() {
       image: ecommerceImage,
       description:
         "Built with React, Node.js, and MySQL. Includes user auth, cart, checkout, order management, and admin panel.",
-      link: "http://hover-shop.s3-website.eu-north-1.amazonaws.com/",
+      link: "https://shivanishreeg.github.io/HoverSale/",
     },
     {
       id: 'portfolio',

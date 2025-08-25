@@ -8,15 +8,26 @@ import {
 import profileImage from "../assets/Profile.jpeg";
 import { Link as ScrollLink } from "react-scroll";
 import "../index.css";
-
+import ParticleBackground from "../components/ParticleBackground"; // ✅ Import
 
 function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-black px-4 pt-20"
+      className="relative min-h-screen flex items-center justify-center px-4 pt-20"
     >
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl w-full">
+      {/* ✅ Particles behind everything */}
+      <div className="absolute inset-0 z-0">
+        <ParticleBackground />
+      </div>
+
+      {/* ✅ Semi-transparent black overlay for readability */}
+      {/* Light overlay so particles stay visible */}
+
+
+
+      {/* ✅ Your content stays above */}
+      <div className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl w-full">
         {/* Profile Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <div className="glow-ring animate-float shadow-xl">
@@ -87,14 +98,13 @@ function Home() {
               View Projects
             </ScrollLink>
             <a
-  href={`${process.env.PUBLIC_URL}/Shivani.pdf`}
-  download
-  className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
->
-  <FaDownload className="group-hover:rotate-12 transition" />
-  Download Resume
-</a>
-
+              href={`${process.env.PUBLIC_URL}/Shivani.pdf`}
+              download
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-teal to-aqua text-white font-semibold button-glow"
+            >
+              <FaDownload className="group-hover:rotate-12 transition" />
+              Download Resume
+            </a>
 
             <ScrollLink
               to="contact"

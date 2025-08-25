@@ -13,8 +13,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen overflow-hidden bg-black text-white">
-        <ParticleBackground />
+      <div className="relative min-h-screen bg-transparent text-white">
         <Navbar />
         <main className="relative z-10 p-4">
           <Routes>
@@ -38,5 +37,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
